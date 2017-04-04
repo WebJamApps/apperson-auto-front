@@ -2,10 +2,14 @@
   <div class="page-host">
     <paper-drawer-panel right-drawer drawer-width.bind="drawerWidth">
       <paper-header-panel drawer>
-        <paper-material class="material-header" elevation="0" style="background-color: #2a222a">
-          <!-- <paper-card if.bind="fullmenu" image="../styles/imgs/webjamlogo1.png" style="width:180px; border:0"> -->
-            <paper-card if.bind="fullmenu" style="width:180px; border:0">
-          </paper-card>    
+        <paper-material class="material-header" elevation="0" style="background-color: #881204">
+          <a style="display:block;color:white" href="tel:5404447337">
+                     <h4 if.bind="fullmenu" class="material-header-h4-call"
+                     style="text-align:center; margin-right:280px; padding-top:0; padding-bottom: 0; width: 200px; margin-top: 8px">
+                     Call
+                     <br>540-444-7337
+                   </h4>
+                 </a>   
         </paper-material>
         <div style="background-color: #c0c0c0;padding-top:50px; margin:0;padding-left:10px">
           
@@ -49,13 +53,15 @@
       </paper-header-panel>
       <paper-header-panel main class="main-panel">
         <paper-material class="material-header" elevation="0">
-          <paper-card alt="web-jam-icon" image="../styles/imgs/webjamicon7.png" style="width:80px; background-color:#2a222a">
-          </paper-card> 
-          <paper-card  style="background-color:#2a222a;top:-30px;left:5px;text-align:center;">
-            <h3 style="color: white">Web Jam LLC</h3>
+          <paper-card if.bind = "widescreen" alt="headerlogo" image="../styles/imgs/appersonHeader.png" style="width: 540px">
           </paper-card>
+            <paper-card if.bind = "!widescreen" alt="headerlogo" image="../styles/imgs/appersonHeader.png" style="width: 270px; margin-top:18px">
+          </paper-card> 
+          <!-- <paper-card  style="background-color:#2a222a;top:-30px;left:5px;text-align:center;">
+            <h3 style="color: white">Web Jam LLC</h3>
+          </paper-card> -->
         </paper-material>
-        <i class="fa fa-bars pull-right fa-2x" paper-drawer-toggle aria-hidden="true" style="position:absolute; top:25px;right:12px;color:#c0c0c0"></i>
+        <i class="fa fa-bars pull-right fa-2x" paper-drawer-toggle aria-hidden="true" style="position:absolute; top:20px;right:10px;color:#45c9ff"></i>
         <router-view></router-view>
       </paper-header-panel>
     </paper-drawer-panel>

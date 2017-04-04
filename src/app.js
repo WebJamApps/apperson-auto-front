@@ -28,12 +28,18 @@ export class App {
   @bindable
   fullmenu = true;
   
+  // @bindable
+  // logoWidth = '200px'
+  
   get widescreen(){
     let iswidescreen = false;
     let currentscreenwidth = document.documentElement.clientWidth;
     /* istanbul ignore else */
     if (currentscreenwidth > 766){
       iswidescreen = true;
+      //this.logoWidth = '200px';
+  //  } else {
+    //  this.logoWidth = '100px';
     }
     return iswidescreen;
   }

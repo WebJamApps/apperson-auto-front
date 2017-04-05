@@ -35,7 +35,7 @@ export class App {
     let iswidescreen = false;
     let currentscreenwidth = document.documentElement.clientWidth;
     /* istanbul ignore else */
-    if (currentscreenwidth > 766){
+    if (currentscreenwidth > 970){
       iswidescreen = true;
       //this.logoWidth = '200px';
   //  } else {

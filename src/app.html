@@ -11,7 +11,7 @@
                    </h4>
                  </a>   
         </paper-material>
-        <div style="background-color: #c0c0c0;padding-top:50px; margin:0;padding-left:10px">
+        <div style="background-color: #505050;padding-top:30px; margin:0;padding-left:10px">
           
           <!-- <paper-item if.bind="widescreen" style="padding-left:10px">
             <i class="fa fa-bars pull-left fa-1x" click.delegate="togglemenu()"></i>
@@ -34,7 +34,7 @@
           <paper-item style="padding-right:0; padding-left:10px" repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
             <a paper-drawer-toggle style="display:block" href.bind="row.href" class="navlink">
               <!-- <span class="${row.settings}"></span> -->
-              <span if.bind="fullmenu" style="padding-right:0; margin-right:0">${row.title}</span>
+              <span if.bind="fullmenu" style="padding-right:0; margin-right:0; color:#45C9FF">${row.title}</span>
             </a>
           </paper-item>
 
@@ -53,9 +53,9 @@
       </paper-header-panel>
       <paper-header-panel main class="main-panel">
         <paper-material class="material-header" elevation="0">
-          <paper-card if.bind = "widescreen" alt="headerlogo" image="../styles/imgs/appersonHeader.png" style="width: 540px">
+          <paper-card if.bind = "widescreen" alt="headerlogo" image="../styles/imgs/logo1.png" style="width: 740px; margin-top:6px; margin-left:0" elevation="0">
           </paper-card>
-            <paper-card if.bind = "!widescreen" alt="headerlogo" image="../styles/imgs/appersonHeader.png" style="width: 270px; margin-top:18px">
+            <paper-card elevation="0" if.bind = "!widescreen" alt="headerlogo" image="../styles/imgs/logo1.png" style="width: 272px; margin-top:25px">
           </paper-card> 
           <!-- <paper-card  style="background-color:#2a222a;top:-30px;left:5px;text-align:center;">
             <h3 style="color: white">Web Jam LLC</h3>

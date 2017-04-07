@@ -39,7 +39,7 @@ describe('the app.router.config module', () => {
   });
 
   it('configures the router title', () => {
-    expect(sut.router.title).toEqual('Web Jam LLC');
+    expect(sut.router.title).toEqual('Apperson Automotive');
   });
 
   it('configures the router to use pushState', () => {

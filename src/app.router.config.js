@@ -1,6 +1,7 @@
 import {AuthorizeStep} from 'aurelia-auth';
 import {inject} from 'aurelia-framework';
 import {Router} from 'aurelia-router';
+import {PLATFORM} from 'aurelia-pal';
 
 @inject(Router, AuthorizeStep)
 export class AppRouterConfig{
@@ -16,13 +17,13 @@ export class AppRouterConfig{
       config.map([
         //{ route: 'dashboard', name: 'dashboard-router', moduleId: './dashboard-router', nav: false, title: 'Dashboard', auth: true, settings: 'fa fa-tachometer'},
         //{ route: 'login', name: 'login', moduleId: './login', nav: false, title: 'Login', settings: 'fa fa-sign-in'},
-        { route: 'auto-maintenance', name: 'auto-maintenance', moduleId: './automaintenance', nav: true, title: 'Auto Maintenance', settings: 'fa fa-file-text-o' },
-        { route: 'general-auto-repair', name: 'general-auto-repair', moduleId: './genautorepair', nav: true, title: 'General Auto Repair', settings: 'fa fa-handshake-o' },
-          { route: 'major-auto-repair', name: 'major-auto-repair', moduleId: './majautorepair', nav: true, title: 'Major Auto Repair', settings: 'fa fa-star-o' },
-            { route: 'contact', name: 'contact', moduleId: './contact', nav: true, title: 'Contact', settings: 'fa fa-book' },
+        { route: 'auto-maintenance', name: 'auto-maintenance', moduleId: PLATFORM.moduleName('./automaintenance'), nav: true, title: 'Auto Maintenance', settings: 'fa fa-file-text-o' },
+        { route: 'general-auto-repair', name: 'general-auto-repair', moduleId: PLATFORM.moduleName('./genautorepair'), nav: true, title: 'General Auto Repair', settings: 'fa fa-handshake-o' },
+          { route: 'major-auto-repair', name: 'major-auto-repair', moduleId: PLATFORM.moduleName('./majautorepair'), nav: true, title: 'Major Auto Repair', settings: 'fa fa-star-o' },
+            { route: 'contact', name: 'contact', moduleId: PLATFORM.moduleName('./contact'), nav: true, title: 'Contact', settings: 'fa fa-book' },
         //{ route: 'music', name: 'music-router', moduleId: './music-router', nav: true, title: 'Music', settings: 'fa fa-music' },
       //{ route: 'textadventure', name: 'textadventure', moduleId: './textadventure-home', nav: true, title: 'Text Adventure', settings: 'fa fa-shield' },
-{ route: ['', 'home'], name: 'home', moduleId: './home', nav: true, title: 'Home', settings: 'fa fa-home' }
+{ route: ['', 'home'], name: 'home', moduleId: PLATFORM.moduleName('./home'), nav: true, title: 'Home', settings: 'fa fa-home' }
       ]);
     };
 

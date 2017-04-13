@@ -1,16 +1,22 @@
+const port = 19876;
+
 exports.config = {
-  baseUrl: 'http://localhost:19876/',
-  
-  // use `npm run e2e`
+  port: port,
+
+  baseUrl: `http://localhost:${port}/`,
+
+  // use `npm start -- e2e`
+
   specs: [
-    'e2e/**/*.js'
+    '**/*.e2e.js'
   ],
+
   exclude: [],
-  
+
   framework: 'jasmine',
-  
+
   allScriptsTimeout: 110000,
-  
+
   jasmineNodeOpts: {
     showTiming: true,
     showColors: true,
@@ -18,23 +24,22 @@ exports.config = {
     includeStackTrace: false,
     defaultTimeoutInterval: 400000
   },
+
   directConnect: true,
-  
+
   capabilities: {
     'browserName': 'chrome',
     'chromeOptions': {
       'args': ['show-fps-counter=true']
     }
   },
-  
+
   onPrepare: function() {
-    require('babel-register')({
-      plugins: ['transform-decorators-legacy'],
-      presets: ['es2015-loose-native-modules', 'stage-1']
-    });
+    process.env.BABEL_TARGET = 'node';
+    require('babel-register');
   },
-  
+
   plugins: [{
-    package: 'aurelia-tools/plugins/protractor'
+    package: 'aurelia-protractor-plugin'
   }]
 };

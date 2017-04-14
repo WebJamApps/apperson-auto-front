@@ -1,10 +1,10 @@
 {
-  "name": "web-jam-front",
+  "name": "appersonautomotive",
   "version": "0.1.0",
-  "description": "Front End of web-jam.com App",
+  "description": "www.appersonautomotive.com",
   "main": "dist/app.bundle.js",
   "repository": {
-    "url": "git+ssh://git@github.com/WebJamApps/combined-front.git",
+    "url": "git+ssh://git@github.com/WebJamApps/apperson-auto-front",
     "type": "git"
   },
   "author": "HandlersAndKickers",

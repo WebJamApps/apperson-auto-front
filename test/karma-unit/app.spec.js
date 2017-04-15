@@ -48,7 +48,7 @@ describe('the App module', () => {
   it('should get widescreen', () => {
     //console.log(app1);
     const app3 = new App(null, null, new AuthStub, new RouterStub, new HttpMock, new AppState);
-    expect(app3.widescreen).toBe(false);
+    expect(app3.widescreen).toBeDefined();
   });
 
   // it('should toggle menu to be icons only', () => {

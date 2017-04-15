@@ -5,8 +5,8 @@ import {AppRouterConfig} from '../../src/app.router.config';
 import {RouterStub} from './commons';
 
 describe('the app.router.config module', () => {
-  var sut;
-  var mockedRouter;
+  let sut;
+  let mockedRouter;
   
   beforeEach(() => {
     mockedRouter = new RouterStub();
@@ -19,7 +19,7 @@ describe('the app.router.config module', () => {
   });
   
   it('configures the router title', () => {
-    expect(sut.router.title).toEqual('Web Jam LLC');
+    expect(sut.router.title).toEqual('Apperson Automotive');
   });
   
   it('configures the router to use pushState', () => {

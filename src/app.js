@@ -38,8 +38,8 @@ export class App {
     if (currentscreenwidth > 970){
       iswidescreen = true;
       //this.logoWidth = '200px';
-  //  } else {
-    //  this.logoWidth = '100px';
+      //  } else {
+      //  this.logoWidth = '100px';
     }
     return iswidescreen;
   }
@@ -51,6 +51,12 @@ export class App {
     } else {
       this.fullmenu = true;
       this.drawerWidth = '200px';
+    }
+  }
+  close() {
+    if (!this.widescreen) {
+      let drawer = document.getElementById('drawerPanel');
+      drawer.closeDrawer();
     }
   }
   

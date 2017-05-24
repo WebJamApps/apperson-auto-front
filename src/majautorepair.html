@@ -1,6 +1,6 @@
 <template>
   <div class="page-content">
-    <div style="float: right; width: 674px; margin:auto;" if.bind = "widescreen">
+    <div style="float: right; width: 674px; margin:auto;padding-bottom:10px" if.bind = "widescreen">
       <paper-material elevation="0">
         <polymer-slideshow>
           <polymer-slide>
@@ -33,7 +33,6 @@
         </polymer-slideshow>
       </paper-material>
     </div>
-    
     <div if.bind = "!widescreen">
       <paper-material elevation="0">
         <polymer-slideshow>
@@ -67,7 +66,6 @@
         </polymer-slideshow>
       </paper-material>
     </div>
-    
     <div>
       <paper-material class="material-content" elevation="0">
         <h4 if.bind = "!widescreen" style="margin-top:15%;font-weight: bold;
@@ -78,30 +76,26 @@
       font-size: 16pt;">
       Major Auto Repair
     </h4>
-    
     <div>
       <p>
         If you’re experiencing problems with your vehicle then bring it to us for our excellent diagnostic service.
       </p>
-      
       <p><br>Receive <b>5% OFF our mechanical repairs</b> when you present the coupon from this site.
         <br><br>You’ll receive a <b>12-month 12,000-mile warranty</b>
         <br>for all of our services.
       </p>
-      
     </div>
-    <div style="width: 300px;float:right; margin-top:45px;" if.bind = "widescreen">
+    <div style="width: 300px;float:right; margin-top:80px;" if.bind = "widescreen">
       <paper-material elevation="0">
         <polymer-slideshow>
           <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/banner5.png" style="bottom:6px"></paper-card>
+            <paper-card class="slideshowimage" image="../static/imgs/banner5.png" style="bottom:6px;"></paper-card>
           </polymer-slide>
         </polymer-slideshow>
       </paper-material>
     </div>
     <div>
       <h4 style="margin-top:40px">Apperson Automotive - Salem, VA Serious Auto Repair</h4>
-      <!-- <h4 if.bind = "!widescreen" style="margin-top:20px">Apperson Automotive - Salem, VA Vehicle Care</h4> -->
       <p><strong>Service you can count on:</strong></p>
       <ul>
         <li>Starter repair / replacement</li>
@@ -111,7 +105,6 @@
         <li>And much more</li>
       </ul>
       <p><strong>Receive 5% OFF mechanical repairs (must present coupon):</strong></p>
-      
       <p>
         We’ll provide you with trustworthy service. We stand behind our work.
       </p>
@@ -119,9 +112,7 @@
         You’ll receive a 12-month 12,000-mile warranty on all repairs.<br>Competitive rates are available. Call Apperson Automotive at
         <a href="tel:5404447337">540-444-7337</a><br> to set up your appointment.
       </p>
-      
     </div>
-    
     <div if.bind = "!widescreen" style ="width: 295px; margin:auto; padding-bottom:205px">
       <paper-material elevation="0">
         <polymer-slideshow>
@@ -132,10 +123,8 @@
       </paper-material>
     </div>
   </paper-material>
-  
   <div>
-    <paper-material class="footer" elevation="4" style="padding:10px; background-color: #505050; margin-top:10px">
-      
+    <paper-material class="footer" elevation="4" style="padding:10px; background-color: #505050; margin-top:46px">
       <div class="paper-card-img">
         <a href="https://www.facebook.com/pages/Apperson-Automotive/361511727202422">
           <i style="color:#45C9FF" class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
@@ -147,7 +136,6 @@
           <a style="color:white; font-size:8pt;" href="https://www.web-jam.com">Web Jam LLC</a>
         </span>
       </div>
-      
     </paper-material>
   </div>
 </div>

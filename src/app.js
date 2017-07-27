@@ -6,7 +6,7 @@ import {AuthService} from 'aurelia-auth';
 import {HttpClient} from 'aurelia-fetch-client';
 import {AppState} from './classes/AppState.js';
 System.import('isomorphic-fetch');
-
+System.import('whatwg-fetch');
 @inject(Router, FetchConfig, AuthService, AppRouterConfig, HttpClient, AppState)
 export class App {
   constructor(router, fetchConfig, auth, appRouterConfig, httpClient, appState){
@@ -21,16 +21,16 @@ export class App {
   password='';
   authenticated = false;
   token='';
-  
+
   @bindable
   drawerWidth = '200px';
-  
+
   @bindable
   fullmenu = true;
-  
+
   // @bindable
   // logoWidth = '200px'
-  
+
   get widescreen(){
     let iswidescreen = false;
     let currentscreenwidth = document.documentElement.clientWidth;
@@ -43,7 +43,7 @@ export class App {
     }
     return iswidescreen;
   }
-  
+
   togglemenu(){
     if (this.fullmenu) {
       this.fullmenu = false;
@@ -59,18 +59,18 @@ export class App {
       drawer.closeDrawer();
     }
   }
-  
+
   logout(){
     this.auth.setToken('');
     this.authenticated = false;
     this.auth.logout('/');
   }
-  
+
   // getTokens(){
   //   return this.auth.getTokenPayload();
   // }
   //
-  
+
   activate() {
     this.appRouterConfig.configure();
     this.configHttpClient();
@@ -82,7 +82,7 @@ export class App {
       this.authenticated = false;
     }
   }
-  
+
   configHttpClient(){
     this.httpClient.configure(httpConfig => {
       httpConfig

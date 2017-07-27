@@ -18,6 +18,10 @@ module.exports = {
         watch: 'karma start test/karma.conf.js --single-run=false',
         debug: 'karma start test/karma.conf.js --single-run=false --debug'
       },
+      lint: {
+        default: 'eslint .',
+        fix: 'eslint --fix'
+      },
       all: concurrent({
         browser: series.nps('test.karma', 'e2e'),
         jest: 'nps test.jest'
@@ -80,9 +84,9 @@ module.exports = {
         }
       },
       server: {
-        default: `webpack-dev-server -d --devtool '#source-map' --inline --env.server`,
-        extractCss: `webpack-dev-server -d --devtool '#source-map' --inline --env.server --env.extractCss`,
-        hmr: `webpack-dev-server -d --devtool '#source-map' --inline --hot --env.server`
+        default: 'webpack-dev-server -d --devtool "#source-map" --inline --env.server',
+        extractCss: 'webpack-dev-server -d --devtool "#source-map" --inline --env.server --env.extractCss',
+        hmr: 'webpack-dev-server -d --devtool "#source-map" --inline --hot --env.server'
       }
     },
     serve: 'pushstate-server dist'

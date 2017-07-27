@@ -34,7 +34,7 @@ module.exports = ({production, server, extractCss, coverage} = {}) => ({
   },
   entry: {
     app: ['aurelia-bootstrapper'],
-    vendor: ['bluebird', 'jquery', 'bootstrap']
+    vendor: ['bluebird', 'jquery', 'bootstrap', 'whatwg-fetch', 'isomorphic-fetch']
   },
   output: {
     path: outDir,
@@ -48,6 +48,7 @@ module.exports = ({production, server, extractCss, coverage} = {}) => ({
     historyApiFallback: true,
     port: parseInt(process.env.PORT, 10)
   },
+  devtool: (process.env.NODE_ENV !== 'production') ? 'inline-source-map' : false,
   // server: {port: parseInt(process.env.PORT, 10)},
   module: {
     rules: [
@@ -69,7 +70,9 @@ module.exports = ({production, server, extractCss, coverage} = {}) => ({
         use: cssRules
       },
       { test: /\.html$/i, loader: 'html-loader' },
-      { test: /\.js$/i, loader: 'babel-loader', exclude: nodeModulesDir },
+      { test: /\.js$/i, loader: 'babel-loader', exclude: nodeModulesDir,
+        options: coverage ? { sourceMap: 'inline', plugins: [ 'istanbul' ] } : {}
+      },
       { test: /\.json$/i, loader: 'json-loader' },
       // use Bluebird as the global Promise implementation:
       { test: /[\/\\]node_modules[\/\\]bluebird[\/\\].+\.js$/, loader: 'expose-loader?Promise' },
@@ -112,7 +115,7 @@ module.exports = ({production, server, extractCss, coverage} = {}) => ({
       { from: 'static/includes.html', to: 'includes.html' },
        { from: 'static/imgs', to: 'static/imgs' }]
     ),
-    new webpack.EnvironmentPlugin(['NODE_ENV', 'AuthProductionBaseURL', 'PORT', 'BackendUrl', 'GoogleClientId']),
+    new webpack.EnvironmentPlugin(['NODE_ENV', 'AuthProductionBaseURL', 'PORT', 'BackendUrl', 'GoogleClientId', 'userRoles']),
     new webpack.DefinePlugin({'process.env': Object.keys(process.env).reduce((o, k) => {
       o[k] = JSON.stringify(process.env[k]);
       return o;

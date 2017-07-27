@@ -4,12 +4,12 @@ import {App} from '../../src/app';
 import {AppState} from '../../src/classes/AppState.js';
 import {AuthStub, RouterStub, HttpMock} from './commons';
 
-class AuthStub2 extends AuthStub {
-  isAuthenticated() {
-    this.authenticated = false;
-    return this.authenticated;
-  }
-}
+// class AuthStub2 extends AuthStub {
+//   isAuthenticated() {
+//     this.authenticated = false;
+//     return this.authenticated;
+//   }
+// }
 
 describe('the App module', () => {
   let app1;

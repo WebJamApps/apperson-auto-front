@@ -1,3 +1,4 @@
+// this file will be used by default by babel@7 once it is released
 module.exports = {
   "plugins": [
     "transform-decorators-legacy",
@@ -7,7 +8,7 @@ module.exports = {
     [
       "env", {
         "targets": process.env.BABEL_TARGET === 'node' ? {
-          "node": ["7.8.0"]
+          "node": process.env.IN_PROTRACTOR ? '6' : 'current'
         } : {
           "browsers": [
             "last 2 versions",
@@ -17,11 +18,7 @@ module.exports = {
         },
         "loose": true,
         "modules": process.env.BABEL_TARGET === 'node' ? 'commonjs' : false,
-        // "whitelist": [
-        //   "transform-es2015-literals",
-        //   "transform-es2015-template-literals"
-        // ],
-       "useBuiltIns": 'entry'
+        "useBuiltIns": true
       }
     ]
   ]

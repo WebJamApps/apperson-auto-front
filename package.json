@@ -52,7 +52,7 @@
     "autoprefixer": "^6.7.7",
     "babel-polyfill": "^6.23.0",
     "bluebird": "^3.5.0",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^4.0.0",
     "dotenv": "^4.0.0",
     "font-awesome": "^4.7.0",
     "global": "^4.3.2",

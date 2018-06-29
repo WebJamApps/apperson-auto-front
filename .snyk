@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.7.1
+version: v1.12.0
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
@@ -18,3 +18,8 @@ patch:
         patched: '2017-05-24T11:12:20.609Z'
     - pushstate-server > serve-static > send > ms:
         patched: '2017-05-24T11:12:20.609Z'
+  'npm:mime:20170907':
+    - pushstate-server > serve-static > send > mime:
+        patched: '2018-06-29T08:55:50.946Z'
+    - pushstate-server > connect-static-file > send > mime:
+        patched: '2018-06-29T08:55:50.946Z'

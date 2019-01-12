@@ -2,10 +2,8 @@ node_modules
 .DS_STORE
 npm-debug.log*
 yarn-error.log
-
 /test/*coverage
 /.chrome
 bower_components
 .env
-
-# dist
+dist

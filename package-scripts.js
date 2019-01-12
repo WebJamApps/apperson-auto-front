@@ -1,5 +1,7 @@
-const {series, crossEnv, concurrent, rimraf} = require('nps-utils');
-const {config: {port: E2E_PORT}} = require('./test/protractor.conf');
+const {
+  series, crossEnv, concurrent, rimraf
+} = require('nps-utils');
+const { config: { port: E2E_PORT } } = require('./test/protractor.conf');
 
 module.exports = {
   scripts: {
@@ -7,31 +9,41 @@ module.exports = {
     test: {
       default: 'nps test.jest',
       jest: {
-        default: crossEnv('BABEL_TARGET=node jest'),
-        watch: crossEnv('BABEL_TARGET=node jest --watch')
+        default: series(
+          rimraf('test/coverage-jest'),
+          crossEnv('BABEL_TARGET=node jest')
+        ),
+        accept: crossEnv('BABEL_TARGET=node jest -u'),
+        watch: crossEnv('BABEL_TARGET=node jest --watch'),
       },
       karma: {
         default: series(
-          rimraf('test/karma-coverage'),
+          rimraf('test/coverage-karma'),
           'karma start test/karma.conf.js'
         ),
-        watch: 'karma start test/karma.conf.js --single-run=false',
-        debug: 'karma start test/karma.conf.js --single-run=false --debug'
+        watch: 'karma start test/karma.conf.js --auto-watch --no-single-run',
+        debug: 'karma start test/karma.conf.js --auto-watch --no-single-run --debug'
       },
       lint: {
         default: 'eslint .',
         fix: 'eslint --fix'
       },
+      react: {
+        default: crossEnv('BABEL_TARGET=node jest --no-cache --config jest.React.json --notify'),
+        accept: crossEnv('BABEL_TARGET=node jest -u --no-cache --config jest.React.json --notify --updateSnapshot'),
+        watch: crossEnv('BABEL_TARGET=node jest --watch --no-cache --config jest.React.json --notify')
+      },
       all: concurrent({
         browser: series.nps('test.karma', 'e2e'),
-        jest: 'nps test.jest'
+        jest: 'nps test.jest',
+        lint: 'nps test.lint'
       })
     },
     e2e: {
-      default: concurrent({
+      default: `${concurrent({
         webpack: `webpack-dev-server --inline --port=${E2E_PORT}`,
         protractor: 'nps e2e.whenReady'
-      }) + ' --kill-others --success first',
+      })} --kill-others --success first`,
       protractor: {
         install: 'webdriver-manager update',
         default: series(
@@ -84,9 +96,9 @@ module.exports = {
         }
       },
       server: {
-        default: 'webpack-dev-server -d --devtool "#source-map" --inline --env.server',
-        extractCss: 'webpack-dev-server -d --devtool "#source-map" --inline --env.server --env.extractCss',
-        hmr: 'webpack-dev-server -d --devtool "#source-map" --inline --hot --env.server'
+        default: 'webpack-dev-server -d --inline --env.server',
+        extractCss: 'webpack-dev-server -d --inline --env.server --env.extractCss',
+        hmr: 'webpack-dev-server -d --inline --hot --env.server'
       }
     },
     serve: 'pushstate-server dist'

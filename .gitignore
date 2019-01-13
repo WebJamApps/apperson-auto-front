@@ -7,3 +7,5 @@ yarn-error.log
 bower_components
 .env
 dist
+.idea
+coverage

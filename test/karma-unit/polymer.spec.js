@@ -6,7 +6,7 @@ describe('The Polymer module', () => {
   beforeEach(() => {
     http = new HttpClient();
     http.configure((config) => {
-      config.withBaseUrl('http://localhost:' + process.env.PORT + '/');
+      config.withBaseUrl(`http://localhost:${process.env.PORT}/`);
     });
   });
 

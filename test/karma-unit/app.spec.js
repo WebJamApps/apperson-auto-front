@@ -1,9 +1,9 @@
 
-const Counter = require('assertions-counter');
 import {App} from '../../src/app';
-import {AppState} from '../../src/classes/AppState.js';
+import {AppState} from '../../src/classes/AppState';
 import {AuthStub, RouterStub, HttpMock} from './commons';
 
+const Counter = require('assertions-counter');
 // class AuthStub2 extends AuthStub {
 //   isAuthenticated() {
 //     this.authenticated = false;
@@ -15,7 +15,7 @@ describe('the App module', () => {
   let app1;
   //let app2;
   beforeEach(() => {
-    app1 = new App(null, null, new AuthStub, new RouterStub, new HttpMock, new AppState);
+    app1 = new App(null, null, new AuthStub(), new RouterStub(), new HttpMock(), new AppState());
     app1.auth.setToken('No token');
     //app2 = new App(null, null, new AuthStub2, new RouterStub, new HttpMock, new AppState);
   });
@@ -24,7 +24,7 @@ describe('the App module', () => {
     const { add: ok } = new Counter(2, done);
     app1.auth.tokenInterceptor = 'tokenInterceptor';
     app1.configHttpClient();
-    app1.httpClient.__configureCallback(new(class {
+    app1.httpClient.__configureCallback(new (class {
       withDefaults(opts) {
         expect(opts.mode).toBe('cors');
         ok();
@@ -47,7 +47,7 @@ describe('the App module', () => {
 
   it('should get widescreen', () => {
     //console.log(app1);
-    const app3 = new App(null, null, new AuthStub, new RouterStub, new HttpMock, new AppState);
+    const app3 = new App(null, null, new AuthStub(), new RouterStub(), new HttpMock(), new AppState());
     expect(app3.widescreen).toBeDefined();
   });
 

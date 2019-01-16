@@ -1,15 +1,15 @@
 <template>
   <div class="page-host">
-    <paper-drawer-panel id="drawerPanel" class="paper-drawer-panel-0" right-drawer drawer-width.bind="drawerWidth">
-      <div id="drawer" class="paper-drawer-panel" style="width: 200px;background-color: #505050;">
-        <paper-material class="material-header x-scope paper-material-0" elevation="0" style="background-color: #881204">
+    <div id="drawerPanel" class="paper-drawer-panel-0" right-drawer drawer-width.bind="drawerWidth">
+      <div id="drawer" class="paper-drawer-panel drawer-container" style="width: 200px;background-color: #505050;">
+        <div class="material-header x-scope paper-material-0" elevation="0" style="background-color: #881204">
           <a style="display:block;color:white;" href="tel:5404447337">
             <h4 if.bind="fullmenu" class="material-header-h4-call" style="text-align:center; margin-right:280px; padding-top:0; padding-bottom: 0; width: 200px; margin-top: 8px">
               Call
               <br>540-444-7337
             </h4>
           </a>
-        </paper-material>
+        </div>
         <div id="mainContainer" style="background-color:#505050;padding-top:40px;margin:0;padding-left:10px">
 
           <!-- <paper-item if.bind="widescreen" style="padding-left:10px">
@@ -50,7 +50,7 @@
 
         </div>
       </div>
-      <div id="" main class="main-panel">
+      <div id="" main class="main-panel content-block">
         <paper-material class="material-header x-scope paper-material-0" elevation="0">
           <paper-card if.bind="widescreen" alt="headerlogo" image="../static/imgs/logo1.png" style="width:740px;margin-top:6px;margin-left:0" elevation="0" aria-label="" class="x-scope paper-card-0">
             <div class="header style-scope paper-card" style="margin-top: 6px;">
@@ -77,6 +77,6 @@
         <i class="fa fa-bars pull-right fa-2x" paper-drawer-toggle aria-hidden="true" style="position:absolute; top:21px;right:8px;color:#45c9ff"></i>
         <router-view></router-view>
       </div>
-    </paper-drawer-panel>
+    </div>
   </div>
 </template>

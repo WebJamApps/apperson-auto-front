@@ -1,25 +1,36 @@
-//import {computedFrom} from 'aurelia-framework';
-//import {Router, Bindable} from 'aurelia-router';
-//import {inject} from 'aurelia-framework';
+// import {computedFrom} from 'aurelia-framework';
+// import {Router, Bindable} from 'aurelia-router';
+// import {inject} from 'aurelia-framework';
 
-//@inject(Router)
+// @inject(Router)
 export class Home {
-  
-  //constructor(router) {
-    //this.router = router;
-  //}
-  
-  
-  get widescreen(){
+  // constructor(router) {
+  // this.router = router;
+  // }
+
+  slides = [
+    '../static/imgs/photo1.png',
+    '../static/imgs/photo2.png',
+    '../static/imgs/photo3.png',
+    '../static/imgs/photo4.png',
+    '../static/imgs/photo5.png',
+    '../static/imgs/photo6.png',
+    '../static/imgs/photo7.png',
+    '../static/imgs/photo8.png',
+    '../static/imgs/photo9.png',
+  ];
+
+  get widescreen() {
     let iswidescreen = false;
-    let currentscreenwidth = document.documentElement.clientWidth;
+    const currentscreenwidth = document.documentElement.clientWidth;
+
     /* istanbul ignore else */
-    if (currentscreenwidth > 1400){
+    if (currentscreenwidth > 1400) {
       iswidescreen = true;
-      //this.columnWidth = '450px';
-    } //else {
-      //this.columnWidth = 'auto';
-    //}
+      // this.columnWidth = '450px';
+    } // else {
+    // this.columnWidth = 'auto';
+    // }
     return iswidescreen;
   }
   // attached() {

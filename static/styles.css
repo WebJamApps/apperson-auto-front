@@ -349,6 +349,14 @@ section.au-enter-active {
   text-align: center;
 }
 
+@media screen and (min-width: 900px) {
+  .drawer-container {
+    float: right;
+    position: fixed;
+    right: 0;
+  }
+}
+
 .paper-card-0 .header.paper-card .title-text.paper-card {
   padding: 16px;
   font-size: 24px;
@@ -362,14 +370,26 @@ section.au-enter-active {
 }
 
 #drawer.paper-drawer-panel {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   height: 100%;
   background-color: white;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  z-index: 100;
+  z-index: 999;
+}
+
+@media screen and (min-width: 900px) {
+  .content-block {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    margin-right: inherit;
+  }
 }
 
 .style-scope, paper-header-panel {

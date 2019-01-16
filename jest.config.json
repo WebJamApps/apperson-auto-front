@@ -1,11 +1,9 @@
 {
   "verbose": true,
   "bail": true,
-  "testPathIgnorePatterns": ["/node_modules/", "/test/karma-unit/", "/test/react-unit/"],
+  "testPathIgnorePatterns": ["/node_modules/", "/test/karma-unit/", "/test/react-unit/", "test/e2e"],
   "coverageDirectory": "coverage/jest",
-  "collectCoverageFrom": ["src/classes/*.{js,jsx}", "src/commons/*.{js,jsx}", "!**/node_modules/**", "!src/commons/slideshow.js",
-    "!src/classes/AppState.js", "!src/classes/UserAccess.js", "!src/classes/FormValidator.js"
-  ],
+  "collectCoverageFrom": ["src/classes/*.{js,jsx}", "!**/node_modules/**", "!src/classes/AppState.js", "!src/classes/UserAccess.js"],
   "collectCoverage": true,
   "testEnvironment": "jest-environment-jsdom",
   "testURL": "http://localhost/"

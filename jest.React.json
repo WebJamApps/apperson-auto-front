@@ -5,7 +5,10 @@
     "enzyme-react-16-adapter-setup",
     "<rootDir>/test/jest-pretest.js"
   ],
-  "testPathIgnorePatterns": ["/node_modules/", "/test/karma-unit/", "/test/jest-unit"],
+  "moduleNameMapper":{
+    "\\.(css|less|sass|scss)$": "<rootDir>/test/react-unit/__styleMock__.js"
+  },
+  "testPathIgnorePatterns": ["/node_modules/", "/test/karma-unit/", "/test/jest-unit", "test/e2e"],
   "coverageDirectory": "coverage/jest-react",
   "collectCoverageFrom": ["src/components/*.{js,jsx}", "!src/classes/*.{js,jsx}", "!src/commons/*.{js,jsx}", "!**/node_modules/**"],
   "collectCoverage": true,

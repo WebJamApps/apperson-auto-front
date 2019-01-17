@@ -30,7 +30,7 @@ module.exports = (config) => {
     * available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     */
     preprocessors: {
-      'test/karma-bundle.js': ['webpack', 'sourcemap']
+      'test/karma-bundle.js': ['webpack']
     },
 
     webpack: require('../webpack.config')({ coverage: !process.argv.some(isDebug) }),

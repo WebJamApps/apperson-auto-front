@@ -32,6 +32,11 @@
     "jest/valid-expect-in-promise": "off",
     "jest/no-jasmine-globals": "off",
     "object-curly-spacing": "off",
+    "no-plusplus": "off",
+    "no-else-return": "off",
+    "spaced-comment": "off",
+    "prefer-const": "off",
+    "arrow-parens": "off",
     "import/prefer-default-export": [0, "never"],
     "max-len": ["error", {
       "code": 150

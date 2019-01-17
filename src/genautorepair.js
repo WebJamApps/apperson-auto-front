@@ -1,15 +1,12 @@
 export class GenAutoRepair {
-  
-  get widescreen(){
+  get widescreen() {
     let iswidescreen = false;
-    let currentscreenwidth = document.documentElement.clientWidth;
+    const currentscreenwidth = document.documentElement.clientWidth;
     /* istanbul ignore else */
-    if (currentscreenwidth > 1300){
+    if (currentscreenwidth > 1300) {
       iswidescreen = true;
       //this.columnWidth = '450px';
-    } //else {
-      //this.columnWidth = 'auto';
-    //}
+    }
     return iswidescreen;
   }
 }

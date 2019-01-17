@@ -1,3 +1,5 @@
+const SpecReporter = require('jasmine-spec-reporter').SpecReporter;
+
 const port = 19876;
 
 exports.config = {
@@ -51,9 +53,16 @@ exports.config = {
   },
 
   onPrepare: () => {
+    jasmine.getEnv().addReporter(new SpecReporter({
+      displayFailuresSummary: true,
+      displayFailuredSpec: true,
+      displaySuiteNumber: true,
+      displaySpecDuration: true
+    }));
     process.env.BABEL_TARGET = 'node';
     process.env.IN_PROTRACTOR = 'true';
-    require('babel-register');
+    require('@babel/polyfill');
+    require('@babel/register');
   },
 
   plugins: [{

@@ -6,8 +6,8 @@ import {HttpClient} from 'aurelia-fetch-client';
 import {AppRouterConfig} from './app.router.config';
 import {AppState} from './classes/AppState';
 
-System.import('isomorphic-fetch');
-System.import('whatwg-fetch');
+import 'isomorphic-fetch';
+import 'whatwg-fetch';
 @inject(Router, FetchConfig, AuthService, AppRouterConfig, HttpClient, AppState)
 export class App {
   constructor(router, fetchConfig, auth, appRouterConfig, httpClient, appState) {

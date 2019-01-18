@@ -30,12 +30,12 @@
             </a>
           </paper-item> -->
 
-          <paper-item style="padding-right:0; padding-left:10px" repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''} paper-item-0">
+          <div style="padding-right:0; padding-left:10px" repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''} paper-item-0">
             <a paper-drawer-toggle style="display:block; text-align: left" href.bind="row.href" class="navlink" click.delegate="close()">
               <!-- <span class="${row.settings}"></span> -->
               <span if.bind="fullmenu" style="padding-right:0; margin-right:0; color:#45c9ff">${row.title}</span>
             </a>
-          </paper-item>
+          </div>
 
 
           <!-- <paper-item if.bind="authenticated" style="background-color: #c09580; padding-left:10px">
@@ -51,29 +51,29 @@
         </div>
       </div>
       <div id="" main class="main-panel content-block">
-        <paper-material class="material-header x-scope paper-material-0" elevation="0">
-          <paper-card if.bind="widescreen" alt="headerlogo" image="../static/imgs/logo1.png" style="width:740px;margin-top:6px;margin-left:0" elevation="0" aria-label="" class="x-scope paper-card-0">
+        <div class="material-header x-scope paper-material-0" elevation="0">
+          <div if.bind="widescreen" alt="headerlogo" image="../static/imgs/logo1.png" style="width:740px;margin-top:6px;margin-left:0" elevation="0" aria-label="" class="x-scope paper-card-0">
             <div class="header style-scope paper-card" style="margin-top: 6px;">
-              <iron-image class="style-scope paper-card x-scope iron-image-0" aria-hidden="false">
-                <div id="sizedImgDv" role="img" class="style-scope iron-image" aria-label="headerlogo" hidden="" style="background-image: url(&quot;../static/imgs/logo1.png&quot;);"></div>
+              <div class="style-scope paper-card x-scope iron-image-0" aria-hidden="false">
+                <div id="sizedImgDv" role="img" class="style-scope iron-image" aria-label="headerlogo" hidden="" style="background-image: url('../static/imgs/logo1.png');"></div>
                 <img id="ig" class="style-scope iron-image" alt="headerlogo" src="../static/imgs/logo1.png">
                 <div id="placholder" class="style-scope iron-image" hidden=""></div>
-              </iron-image>
+              </div>
               <div class="title-text  over-image style-scope paper-card" hidden=""></div>
             </div>
-          </paper-card>
+          </div>
 
-          <paper-card if.bind="!widescreen" elevation="0" alt="headerlogo" image="../static/imgs/logo1.png" style="width:272px;margin-top:25px" aria-label="" class="x-scope paper-card-0">
+          <div if.bind="!widescreen" elevation="0" alt="headerlogo" image="../static/imgs/logo1.png" style="width:272px;margin-top:25px" aria-label="" class="x-scope paper-card-0">
             <div class="header style-scope paper-card" style="width:272px;margin-top:25px">
-              <iron-image class="style-scope paper-card x-scope iron-image-0" aria-hidden="false">
-                <div id="sizedImgDiv" role="img" class="style-scope iron-image" aria-label="headerlogo" hidden="" style="background-image: url(&quot;../static/imgs/logo1.png&quot;);"></div>
+              <div class="style-scope paper-card x-scope iron-image-0" aria-hidden="false">
+                <div id="sizedImgDiv" role="img" class="style-scope iron-image" aria-label="headerlogo" hidden="" style="background-image: url('../static/imgs/logo1.png');"></div>
                 <img id="img" class="style-scope iron-image" style="width: 100%;" alt="headerlogo" src="../static/imgs/logo1.png">
                 <div id="placeholder" class="style-scope iron-image" hidden=""></div>
-              </iron-image>
+              </div>
               <div class="title-text  over-image style-scope paper-card" hidden=""></div>
             </div>
-          </paper-card>
-        </paper-material>
+          </div>
+        </div>
         <i class="fa fa-bars pull-right fa-2x" paper-drawer-toggle aria-hidden="true" style="position:absolute; top:21px;right:8px;color:#45c9ff"></i>
         <router-view></router-view>
       </div>

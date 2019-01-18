@@ -1,75 +1,21 @@
 <template>
+  <require from="./components/pic-slider"></require>
+
   <div class="page-content">
-    <div style="float: right; width: 674px; margin:auto;" if.bind = "widescreen">
-      <paper-material elevation="0">
-        <polymer-slideshow>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo3.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo4.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo1.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo2.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo5.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo6.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo7.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo8.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo9.png"></paper-card>
-          </polymer-slide>
-        </polymer-slideshow>
-      </paper-material>
+    <div style="float: right; width: 674px; height: 300px; margin:auto;" if.bind = "widescreen">
+      <div class="p-0 m-0">
+        <picture-slider data.bind="slides"></picture-slider>
+      </div>
     </div>
 
     <div if.bind = "!widescreen">
-      <paper-material elevation="0">
-        <polymer-slideshow>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo3.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo4.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo1.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo2.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo5.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo6.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo7.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo8.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo9.png"></paper-card>
-          </polymer-slide>
-        </polymer-slideshow>
-      </paper-material>
+      <div class="p-0 m-0">
+        <picture-slider data.bind="slides"></picture-slider>
+      </div>
     </div>
 
     <div>
-      <paper-material class="material-content" elevation="0">
+      <div class="material-content" elevation="0">
         <h4 if.bind = "!widescreen" style="margin-top:15%; font-weight: bold;font-size: 16pt;">
         General Auto Repair
       </h4>
@@ -91,13 +37,13 @@
 
     </div>
     <div style="width: 300px;float:right; margin-top:155px" if.bind = "widescreen">
-      <paper-material elevation="0">
-        <polymer-slideshow>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/banner5.png" style="bottom:30px"></paper-card>
-          </polymer-slide>
-        </polymer-slideshow>
-      </paper-material>
+      <div elevation="0">
+        <div>
+          <div>
+            <div class="slideshowimage" image="../static/imgs/banner5.png" style="bottom:30px"></div>
+          </div>
+        </div>
+      </div>
     </div>
     <div>
       <h4 style="margin-top:40px">Apperson Automotive - Salem, VA Vehicle Care</h4>
@@ -138,18 +84,18 @@
     </div>
 
     <div if.bind = "!widescreen" style ="width: 295px; margin:auto; padding-bottom:205px">
-      <paper-material elevation="0">
-        <polymer-slideshow>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/banner5.png"></paper-card>
-          </polymer-slide>
-        </polymer-slideshow>
-      </paper-material>
+      <div elevation="0">
+        <div>
+          <dic>
+            <div class="slideshowimage" image="../static/imgs/banner5.png"></div>
+          </dic>
+        </div>
+      </div>
     </div>
-  </paper-material>
+  </div>
 
   <div>
-    <paper-material class="footer" elevation="4" style="padding:10px; background-color: #505050; margin-top:10px">
+    <div class="footer" elevation="4" style="padding:10px; background-color: #505050; margin-top:10px">
 
       <div class="paper-card-img">
         <a href="https://www.facebook.com/pages/Apperson-Automotive/361511727202422">
@@ -162,7 +108,7 @@
           <a style="color:white; font-size:8pt;" href="https://www.web-jam.com">Web Jam LLC</a>
         </span>
       </div>
-    </paper-material>
+    </div>
   </div>
 </div>
 </div>

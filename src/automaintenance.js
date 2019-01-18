@@ -1,4 +1,15 @@
 export class AutoMaintenance {
+  slides = [
+    '../static/imgs/photo2.png',
+    '../static/imgs/photo3.png',
+    '../static/imgs/photo4.png',
+    '../static/imgs/photo5.png',
+    '../static/imgs/photo6.png',
+    '../static/imgs/photo7.png',
+    '../static/imgs/photo8.png',
+    '../static/imgs/photo9.png',
+  ];
+
   get widescreen() {
     let iswidescreen = false;
     const currentscreenwidth = document.documentElement.clientWidth;

@@ -27,7 +27,7 @@ export class PicSlider {
   html() {
     return (
       <Slider {...this.settings}>
-        {this.data.map((data, key) => <div key={key}> <img width="86%" height="580px" src={data} alt="alt" /></div>)}
+        {this.data.map((data, key) => <div key={key}> <img width="100%" src={data} alt="alt" /></div>)}
       </Slider>
     );
   }

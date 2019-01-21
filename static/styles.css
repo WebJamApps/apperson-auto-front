@@ -156,6 +156,10 @@ section.au-enter-active {
   opacity: 0 !important;
 }
 
+#mobilemenutoggle {
+  cursor: pointer;
+}
+
 .card-container.au-enter-active {
   -webkit-animation: fadeIn 2s;
   animation: fadeIn 2s;
@@ -354,6 +358,29 @@ section.au-enter-active {
 }
 
 .drawer-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: white;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 999;
+}
+
+#drawerContainer {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 999;
+}
+
+.drawer-container2 {
   position: fixed;
   top: 0;
   right: 0;
@@ -671,7 +698,7 @@ div#mainContainer.flex.style-scope.paper-header-panel {
 .material-header {
   height: 68px;
   margin-left: auto;
-  margin-right: -256px;
+  margin-right: -281px;
   overflow-y: auto;
   min-height: 68px;
   background-color: #881204 !important;

@@ -8,6 +8,10 @@ form {
   margin-top: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 h1,
 h2,
 h3,
@@ -340,11 +344,6 @@ section.au-enter-active {
   margin-top: 5px;
 }
 
-.slick-slide > div {
-  position: relative;
-  height: 40vw !important;
-}
-
 .slideshowimage {
   width: 100%;
   height: 0;
@@ -354,18 +353,18 @@ section.au-enter-active {
   text-align: center;
 }
 
-@media screen and (min-width: 900px) {
-  .drawer-container {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    background-color: white;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    z-index: 999;
-  }
+.drawer-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: white;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 999;
+}
 
+@media screen and (min-width: 900px) {
   .content-block {
     position: absolute;
     top: 0;
@@ -373,6 +372,9 @@ section.au-enter-active {
     left: 0;
     right: 0;
     overflow: auto;
+  }
+
+  .main-panel {
     margin-right: 200px;
   }
 }
@@ -414,6 +416,11 @@ section.au-enter-active {
   ::-webkit-scrollbar:vertical {
     width: 0;
   }
+}
+
+ul > li {
+  font-size: 14px;
+  line-height: 1.42857143;
 }
 
 .search-table-outer {

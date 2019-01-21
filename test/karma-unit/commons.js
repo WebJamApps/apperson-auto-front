@@ -1,6 +1,5 @@
 class RouterStub {
-
-  currentInstruction = { config: { title: 'Howdy is cool' } }
+  currentInstruction = { config: { title: 'Howdy is cool' } };
 
   configure(handler) {
     if (handler) {
@@ -48,20 +47,20 @@ class AuthStub {
   }
   logout(data) {
     const response = 'user logged out';
-    return new Promise((resolve)=>{
-      resolve({json: ()=>response});
+    return new Promise((resolve) => {
+      resolve({json: () => response});
     });
   }
   getMe() {
     const response = 'This is user data';
-    return new Promise((resolve)=>{
-      resolve({json: ()=>response});
+    return new Promise((resolve) => {
+      resolve({json: () => response});
     });
   }
   getTokenPayload() {
     const response = this.token;
-    return new Promise((resolve)=>{
-      resolve({json: ()=>response});
+    return new Promise((resolve) => {
+      resolve({json: () => response});
     });
   }
   isAuthenticated() {
@@ -109,7 +108,7 @@ class HttpMock {
     this.user = data || {name: 'John Fitzgerald', userType: 'Charity'};
   }
   status = 500;
-  headers = {accept: 'application/json', method: '', url: ''}
+  headers = {accept: 'application/json', method: '', url: ''};
   configure(fn) {
     this.__configureCallback = fn;
     return this.__configureReturns;

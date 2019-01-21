@@ -1,7 +1,6 @@
 // import regeneratorRuntime from 'regenerator-runtime';
 
 export class PageObjectWelcome {
-
   getGreeting() {
     return element(by.tagName('h2')).getText();
   }
@@ -30,8 +29,8 @@ export class PageObjectWelcome {
 
       return browser.switchTo().alert().then(
         // use alert.accept instead of alert.dismiss which results in a browser crash
-        function(alert) { alert.accept(); return true; },
-        function() { return false; }
+        (alert) => { alert.accept(); return true; },
+        () => false
       );
     });
   }

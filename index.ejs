@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title><%- htmlWebpackPlugin.options.metadata.title %></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <base href="<%- htmlWebpackPlugin.options.metadata.baseUrl %>">
 
-     <script src="webcomponents.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.23.0/polyfill.min.js"></script>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+  <meta property="og:title" content="Apperson Automotive" />
+  <title>
+    <%- htmlWebpackPlugin.options.metadata.title %>
+  </title>
+  <base href="<%- htmlWebpackPlugin.options.metadata.baseUrl %>">
+  <link href="//fonts.googleapis.com/css?family=PT Sans Caption" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Habibi" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
-     <link href="//fonts.googleapis.com/css?family=PT Sans Caption" rel="stylesheet">
-<link href="//fonts.googleapis.com/css?family=Habibi" rel="stylesheet">
-<!-- <link rel="import" href="polymer.html"> -->
-<link rel="import" href="includes.html">
-
-    <!-- imported CSS are concatenated and added automatically -->
-  </head>
-  <body aurelia-app="main">
-    <div class="splash">
-      <div class="message"><%- htmlWebpackPlugin.options.metadata.title %></div>
-      <i class="fa fa-spinner fa-spin"></i>
+<body aurelia-app="main">
+  <div class="splash">
+    <div style="text-align:center;margin-top:2in;margin-bottom:.5in">
+      <noscript>
+        <strong>You need to enable JavaScript to run this app:</strong>
+      </noscript>
     </div>
-    <% if (htmlWebpackPlugin.options.metadata.server) { %>
-    <!-- Webpack Dev Server reload -->
-    <script src="/webpack-dev-server.js"></script>
-    <% } %>
-  </body>
+    <div class="message" style="text-align:center">
+      <%- htmlWebpackPlugin.options.metadata.title %>
+    </div>
+    <i class="fa fa-spinner fa-spin"></i>
+  </div>
+</body>
+
 </html>

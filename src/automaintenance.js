@@ -1,16 +1,23 @@
 export class AutoMaintenance {
-  
-  get widescreen(){
+  slides = [
+    '../static/imgs/photo2.png',
+    '../static/imgs/photo3.png',
+    '../static/imgs/photo4.png',
+    '../static/imgs/photo5.png',
+    '../static/imgs/photo6.png',
+    '../static/imgs/photo7.png',
+    '../static/imgs/photo8.png',
+    '../static/imgs/photo9.png',
+  ];
+
+  get widescreen() {
     let iswidescreen = false;
-    let currentscreenwidth = document.documentElement.clientWidth;
+    const currentscreenwidth = document.documentElement.clientWidth;
     /* istanbul ignore else */
-    if (currentscreenwidth > 1300){
+    if (currentscreenwidth > 1300) {
       iswidescreen = true;
       //this.columnWidth = '450px';
-    } //else {
-      //this.columnWidth = 'auto';
-    //}
+    }
     return iswidescreen;
   }
-  
 }

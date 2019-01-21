@@ -1,0 +1,13 @@
+{
+  "verbose": true,
+  "bail": true,
+  "testPathIgnorePatterns": ["/node_modules/", "/test/karma-unit/", "/test/react-unit/", "test/e2e"],
+  "coverageDirectory": "coverage/jest",
+  "collectCoverageFrom": ["src/classes/*.{js,jsx}", "!**/node_modules/**", "!src/classes/AppState.js", "!src/classes/UserAccess.js"],
+  "collectCoverage": true,
+  "testEnvironment": "jest-environment-jsdom",
+  "transform": {
+    "\\.js$": "<rootDir>/node_modules/babel-jest"
+  },
+  "testURL": "http://localhost/"
+}

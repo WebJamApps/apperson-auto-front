@@ -1,7 +1,9 @@
+const SpecReporter = require('jasmine-spec-reporter').SpecReporter;
+
 const port = 19876;
 
 exports.config = {
-  port: port,
+  port,
 
   baseUrl: `http://localhost:${port}/`,
 
@@ -30,9 +32,9 @@ exports.config = {
   directConnect: true,
 
   capabilities: {
-    'browserName': 'chrome',
-    'chromeOptions': {
-      'args': [
+    browserName: 'chrome',
+    chromeOptions: {
+      args: [
         '--show-fps-counter',
         '--no-default-browser-check',
         '--no-first-run',
@@ -50,10 +52,17 @@ exports.config = {
     }
   },
 
-  onPrepare: function() {
+  onPrepare: () => {
+    jasmine.getEnv().addReporter(new SpecReporter({
+      displayFailuresSummary: true,
+      displayFailuredSpec: true,
+      displaySuiteNumber: true,
+      displaySpecDuration: true
+    }));
     process.env.BABEL_TARGET = 'node';
     process.env.IN_PROTRACTOR = 'true';
-    require('babel-register');
+    require('@babel/polyfill');
+    require('@babel/register');
   },
 
   plugins: [{

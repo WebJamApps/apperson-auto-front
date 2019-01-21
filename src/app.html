@@ -1,6 +1,6 @@
 <template>
   <div class="page-host">
-    <div class="paper-drawer-panel drawer-container home-sidebar drawer-container" style="width: 200px;background-color: #505050;">
+    <div class="paper-drawer-panel drawer-container home-sidebar" style="width: 200px;background-color: #505050;">
         <div class="material-header x-scope paper-material-0 drawer" elevation="0" style="background-color: #881204">
           <a style="display:block;color:white;" href="tel:5404447337">
             <h4 if.bind="fullmenu" class="material-header-h4-call" style="text-align:center; margin-right:280px; padding-top:0; padding-bottom: 0; width: 200px; margin-top: 8px">
@@ -16,6 +16,24 @@
             </a>
           </div>
         </div>
+    </div>
+    <div click.delegate="closeDrawer()" id="drawerContainer" if.bind="!widescreen" style="display: none;">
+      <div class="paper-drawer-panel drawer-container2 home-sidebar" style="width: 200px;background-color: #505050;">
+      <div class="material-header x-scope paper-material-0 drawer" elevation="0" style="background-color: #881204">
+        <a style="display:block;color:white;" href="tel:5404447337">
+          <h4 if.bind="fullmenu" class="material-header-h4-call" style="text-align:center; margin-right:280px; padding-top:0; padding-bottom: 0; width: 200px; margin-top: 8px">
+            Call <br> 540-444-7337
+          </h4>
+        </a>
+      </div>
+      <div id="mainContainer2" style="background-color:#505050;padding-top:40px;margin:0; margin-top:50px;padding-left:10px">
+        <div style="padding-right:0; padding-left:10px" repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''} paper-item-0">
+          <a paper-drawer-toggle style="display:block; text-align: left" href.bind="row.href" class="navlink" click.delegate="closeDrawer()">
+            <span if.bind="fullmenu" style="padding-right:0; margin-right:0; color:#45c9ff">${row.title}</span>
+          </a>
+        </div>
+      </div>
+    </div>
     </div>
     <div id="" main class="main-panel">
       <div class="material-header x-scope paper-material-0" elevation="0">

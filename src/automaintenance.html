@@ -45,15 +45,13 @@
         <li>Power steering flush</li>
         <li>And much more</li>
       </ul>
-      <div style="width: 300px;float:right; margin-top:140px" if.bind = "widescreen">
-        <div elevation="0">
-          <div>
-            <div>
-              <div class="slideshowimage" image="../static/imgs/banner5.png" style="bottom:88px"></div>
-            </div>
-          </div>
+
+      <div style="width: 300px;float:right; clear: both; margin-top:60px;" if.bind="widescreen">
+        <div class="slideshowimage">
+          <img alt="graphic coupon" src="../static/imgs/banner5.png"/>
         </div>
       </div>
+
       <p><strong>Extend your car’s life with our maintenance service:</strong></p>
       <ul>
         <li>
@@ -94,31 +92,11 @@
 
     </div>
 
-    <div if.bind = "!widescreen" style ="width: 295px; margin:auto; padding-bottom:205px;">
-      <div elevation="0">
-        <div>
-          <div>
-            <div class="slideshowimage" image="../static/imgs/banner5.png"></div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 
-  <div>
-    <div class="footer" elevation="4" style="padding:10px; background-color: #505050; margin-top:10px">
-
-      <div class="paper-card-img">
-        <a href="https://www.facebook.com/pages/Apperson-Automotive/361511727202422">
-          <i style="color: #45c9ff" class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
-        </a>
-        <a href="https://plus.google.com/u/0/108816427272859719871">
-          <i style="color: #45c9ff" class="fa fa-google-plus-square fa-3x" aria-hidden="true"></i>
-        </a>
-        <span style="color:white; font-size: 9pt; padding-left:18px;">Powered by
-          <a style="color:white; font-size:8pt;" href="https://www.web-jam.com">Web Jam LLC</a>
-        </span>
-      </div>
+  <div if.bind="!widescreen">
+    <div style="width: 295px; margin:auto; margin-bottom: 10px;">
+      <img alt="graphic coupon" src="../static/imgs/banner5.png"/>
     </div>
   </div>
 </div>

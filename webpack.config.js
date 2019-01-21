@@ -131,9 +131,8 @@ module.exports = ({
       }
     }),
     new CopyWebpackPlugin([
-      { from: 'static/favicon.ico', to: 'favicon.ico' }
-      // ,
-      // { from: 'static/imgs', to: 'static/imgs' }
+      { from: 'static/favicon.ico', to: 'favicon.ico' },
+      { from: 'static/imgs', to: 'static/imgs' }
     ]),
     new webpack.EnvironmentPlugin(['NODE_ENV', 'AuthProductionBaseURL', 'PORT', 'BackendUrl', 'GoogleClientId', 'userRoles']),
     new webpack.DefinePlugin({

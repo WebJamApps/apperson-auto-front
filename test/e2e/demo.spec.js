@@ -1,9 +1,9 @@
-import {PageObjectWelcome} from './welcome.po.js';
-import {PageObjectSkeleton} from './skeleton.po.js';
+import {PageObjectWelcome} from './welcome.po';
+import {PageObjectSkeleton} from './skeleton.po';
 
-describe('aurelia skeleton app', function() {
-  let poWelcome;
-  let poSkeleton;
+describe('aurelia skeleton app', () => {
+  let poWelcome,
+    poSkeleton;
 
   beforeEach(() => {
     poSkeleton = new PageObjectSkeleton();

@@ -1,8 +1,8 @@
 //import {PageObjectWelcome} from './welcome.po.js';
-import {PageObjectSkeleton} from './skeleton.po.js';
+import {PageObjectSkeleton} from './skeleton.po';
 import {config} from '../protractor.conf';
 
-describe('aurelia skeleton app', function() {
+describe('aurelia skeleton app', () => {
   //let poWelcome;
   let poSkeleton;
 

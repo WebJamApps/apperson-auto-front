@@ -1,11 +1,9 @@
 
 const path = require('path');
 
-let isDebug = (arg) => {
-  return arg === '--debug';
-};
+let isDebug = (arg) => arg === '--debug';
 
-module.exports = function (config) {
+module.exports = (config) => {
   config.set({
     /**
     * base path that will be used to resolve all patterns (e.g. files, exclude)
@@ -17,7 +15,7 @@ module.exports = function (config) {
     *
     * available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     */
-    frameworks: [ 'jasmine' ],
+    frameworks: ['jasmine'],
 
     /**
     * list of files / patterns to load in the browser
@@ -32,7 +30,7 @@ module.exports = function (config) {
     * available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     */
     preprocessors: {
-      'test/karma-bundle.js': [ 'webpack', 'sourcemap' ]
+      'test/karma-bundle.js': ['webpack']
     },
 
     webpack: require('../webpack.config')({ coverage: !process.argv.some(isDebug) }),
@@ -43,10 +41,10 @@ module.exports = function (config) {
     * possible values: 'dots', 'progress'
     * available reporters: https://npmjs.org/browse/keyword/karma-reporter
     */
-    reporters: [ 'mocha', 'coverage' ],
+    reporters: ['mocha', 'coverage'],
 
     coverageReporter: {
-      reporters: [ { type: 'html' }, { type: 'lcovonly' }, { type: 'text-summary' } ],
+      reporters: [{ type: 'html' }, { type: 'lcovonly' }, { type: 'text-summary' }],
       dir: 'coverage/',
       subdir: '.'
     },

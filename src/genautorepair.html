@@ -1,171 +1,93 @@
 <template>
+  <require from="./components/pic-slider"></require>
+
   <div class="page-content">
-    <div style="float: right; width: 674px; margin:auto;" if.bind = "widescreen">
-      <paper-material elevation="0">
-        <polymer-slideshow>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo3.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo4.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo1.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo2.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo5.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo6.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo7.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo8.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo9.png"></paper-card>
-          </polymer-slide>
-        </polymer-slideshow>
-      </paper-material>
-    </div>
-    
-    <div if.bind = "!widescreen">
-      <paper-material elevation="0">
-        <polymer-slideshow>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo3.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo4.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo1.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo2.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo5.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo6.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo7.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo8.png"></paper-card>
-          </polymer-slide>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/photo9.png"></paper-card>
-          </polymer-slide>
-        </polymer-slideshow>
-      </paper-material>
-    </div>
-    
-    <div>
-      <paper-material class="material-content" elevation="0">
-        <h4 if.bind = "!widescreen" style="margin-top:15%; font-weight: bold;
-        font-size: 16pt;">
-        General Auto Repair
-      </h4>
-      <h4 if.bind = "widescreen" style="margin-top:30px; margin-bottom:30px; margin-right:15px; width:540px;font-weight: bold;
-      font-size: 16pt;">
-      General Auto Repair
-    </h4>
-    
-    <div>
-      <p>
-        We know your vehicle is important to you. That’s why we’ll do our best to make sure your car is repaired properly the first time!
-      </p>
-      
-      <p><br>We have more than <b>150 years of combined experience</b>; so you can count on our service to be trustworthy.
-        <br>Our rates are competitive.
-      </p>
-      <p>
-        <br><b>FREE high mileage, vacation vehicle check over</b>.
-      </p>
-      
-    </div>
-    <div style="width: 300px;float:right; margin-top:155px" if.bind = "widescreen">
-      <paper-material elevation="0">
-        <polymer-slideshow>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/banner5.png" style="bottom:30px"></paper-card>
-          </polymer-slide>
-        </polymer-slideshow>
-      </paper-material>
-    </div>
-    <div>
-      <h4 style="margin-top:40px">Apperson Automotive - Salem, VA Vehicle Care</h4>
-      <!-- <h4 if.bind = "!widescreen" style="margin-top:20px">Apperson Automotive - Salem, VA Vehicle Care</h4> -->
-      <p><strong>You’ll love our general auto repair at competitive prices:</strong></p>
-      <ul>
-        <li>Starter repair / replacement</li>
-        <li>Alternator repair / replacement</li>
-        <li>Balancing</li>
-        <li>Regulators service</li>
-        <li>And much more</li>
-      </ul>
-      <p><strong>Receive 12-month 12,000-mile warranty on our services:</strong></p>
-      <ul>
-        <li>
-          Brake calipers
-        </li>
-        <li>
-          Window motors
-        </li>
-        <li>
-          Regulators
-        </li>
-        <li>
-          Door locks
-        </li>
-      </ul>
-      
-      <p>
-        We’ll provide you with our quality shuttle service, taking you to and from work.
-      </p>
-      <p>
-        Quality general auto repair services. 12-month 12,000-mile warranty is available.<br>
-        To find out more about our services, call Apperson Automotive at
-        <a href="tel:5404447337">540-444-7337</a><br>You can also stop by at 1601 Apperson Drive, Salem VA 24153.
-      </p>
-      
-    </div>
-    
-    <div if.bind = "!widescreen" style ="width: 295px; margin:auto; padding-bottom:205px">
-      <paper-material elevation="0">
-        <polymer-slideshow>
-          <polymer-slide>
-            <paper-card class="slideshowimage" image="../static/imgs/banner5.png"></paper-card>
-          </polymer-slide>
-        </polymer-slideshow>
-      </paper-material>
-    </div>
-  </paper-material>
-  
-  <div>
-    <paper-material class="footer" elevation="4" style="padding:10px; background-color: #505050; margin-top:10px">
-      
-      <div class="paper-card-img">
-        <a href="https://www.facebook.com/pages/Apperson-Automotive/361511727202422">
-          <i style="color:#45C9FF" class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
-        </a>
-        <a href="https://plus.google.com/u/0/108816427272859719871">
-          <i style="color:#45C9FF" class="fa fa-google-plus-square fa-3x" aria-hidden="true"></i>
-        </a>
-        <span style="color:white; font-size: 9pt; padding-left:18px;">Powered by
-          <a style="color:white; font-size:8pt;" href="https://www.web-jam.com">Web Jam LLC</a>
-        </span>
+      <div style="float: right; width: 674px; height: 300px; margin:auto;" if.bind = "widescreen">
+        <div class="p-0 m-0">
+          <picture-slider data.bind="slides"></picture-slider>
+        </div>
       </div>
-    </paper-material>
+
+      <div if.bind = "!widescreen">
+        <div class="p-0 m-0">
+          <picture-slider data.bind="slides"></picture-slider>
+        </div>
+      </div>
+
+      <div style="padding: 0 10px;">
+        <div class="material-content" elevation="0">
+          <h4 if.bind = "!widescreen" style="margin-top:25px; font-weight: bold;font-size: 16pt;">
+            General Auto Repair
+          </h4>
+          <h4 if.bind = "widescreen" style="margin-top:30px; margin-bottom:30px; margin-right:15px; width:540px;font-weight: bold;font-size: 16pt;">
+          General Auto Repair
+          </h4>
+        </div>
+
+      <div>
+        <p>
+          We know your vehicle is important to you. That’s why we’ll do our best to make sure your car is repaired properly the first time!
+        </p>
+
+        <p><br>We have more than <b>150 years of combined experience</b>; so you can count on our service to be trustworthy.
+          <br>Our rates are competitive.
+        </p>
+        <p>
+          <br><b>FREE high mileage, vacation vehicle check over</b>.
+        </p>
+      </div>
+
+      <div style="width: 300px;float:right; clear: both; margin-top:80px;" if.bind="widescreen">
+        <div class="slideshowimage">
+          <img alt="graphic coupon" src="../static/imgs/banner5.png"/>
+        </div>
+      </div>
+
+      <div>
+        <h4 style="margin-top:40px">Apperson Automotive - Salem, VA Vehicle Care</h4>
+        <!-- <h4 if.bind = "!widescreen" style="margin-top:20px">Apperson Automotive - Salem, VA Vehicle Care</h4> -->
+        <p><strong>You’ll love our general auto repair at competitive prices:</strong></p>
+        <ul>
+          <li>Starter repair / replacement</li>
+          <li>Alternator repair / replacement</li>
+          <li>Balancing</li>
+          <li>Regulators service</li>
+          <li>And much more</li>
+        </ul>
+        <p><strong>Receive 12-month 12,000-mile warranty on our services:</strong></p>
+        <ul>
+          <li>
+            Brake calipers
+          </li>
+          <li>
+            Window motors
+          </li>
+          <li>
+            Regulators
+          </li>
+          <li>
+            Door locks
+          </li>
+        </ul>
+
+        <p>
+          We’ll provide you with our quality shuttle service, taking you to and from work.
+        </p>
+        <p>
+          Quality general auto repair services. 12-month 12,000-mile warranty is available.<br>
+          To find out more about our services, call Apperson Automotive at
+          <a href="tel:5404447337">540-444-7337</a><br>You can also stop by at 1601 Apperson Drive, Salem VA 24153.
+        </p>
+
+      </div>
+
+     <div if.bind="!widescreen">
+       <div style="width: 295px; margin:auto; margin-bottom: 10px;">
+        <img alt="graphic coupon" src="../static/imgs/banner5.png"/>
+       </div>
+     </div>
+
+    </div>
+
   </div>
-</div>
-</div>
 </template>

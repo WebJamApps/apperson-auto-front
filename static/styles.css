@@ -404,6 +404,11 @@ section.au-enter-active {
   .main-panel {
     margin-right: 200px;
   }
+
+  #scroller {
+    max-height: 100vh;
+    overflow-y: scroll;
+  }
 }
 
 .paper-card-0 .header.paper-card .title-text.paper-card {

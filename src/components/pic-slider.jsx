@@ -14,7 +14,7 @@ export class PicSlider {
     this.element = element;
     this.settings = {
       autoplay: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 5000,
       infinite: true,
       speed: 500,
       slidesToShow: 1,

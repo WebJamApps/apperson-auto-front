@@ -429,6 +429,11 @@ section.au-enter-active {
     margin-right: 190px;
   }
 
+  .page-content {
+    border-right: 1px solid black;
+    background-color: white;
+  }
+
   #scroller {
     height: 100vh;
     overflow-y: scroll;
@@ -463,6 +468,11 @@ section.au-enter-active {
     display: none;
   }
 
+  .page-content {
+    border-right: 0;
+    background-color: white;
+  }
+
   .content-block {
     overflow-x: hidden;
   }
@@ -484,6 +494,10 @@ section.au-enter-active {
   ::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 0 !important;
+  }
+  .page-content {
+    border-right: 0;
+    background-color: white;
   }
 }
 
@@ -746,11 +760,6 @@ div#mainContainer.flex.style-scope.paper-header-panel {
   background-color: #881204 !important;
   margin-bottom: auto;
   padding-left: 1px;
-}
-
-.page-content {
-  border-right: 1px solid black;
-  background-color: white;
 }
 
 .page-host {

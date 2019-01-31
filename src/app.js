@@ -72,8 +72,6 @@ export class App {
   }
 
   toggleMobileMenu(toggle) {
-    document.getElementsByClassName('page-host')[0].style.overflow = 'auto';
-
     this.menuToggled = true;
     const drawer = document.getElementById('drawerContainer');
     if (toggle !== 'close') {
@@ -82,11 +80,6 @@ export class App {
       drawer.style.display = 'none';
     }
   }
-
-  // getTokens(){
-  //   return this.auth.getTokenPayload();
-  // }
-  //
 
   activate() {
     this.appRouterConfig.configure();

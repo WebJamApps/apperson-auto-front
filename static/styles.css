@@ -113,7 +113,7 @@ polymer-slideshow {
   top: 0;
   bottom: 0;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: inherit;
 }
 
 @media print {
@@ -415,6 +415,17 @@ section.au-enter-active {
   background-color: #ffffff;
 }
 
+.content-block {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  margin-top: 74px;
+  margin-right: inherit;
+}
+
 @media screen and (min-width: 900px) {
   .content-block {
     position: absolute;
@@ -423,14 +434,17 @@ section.au-enter-active {
     left: 0;
     right: 0;
     overflow: auto;
+    overflow-y: scroll
   }
-
+.material-content x-scope paper-material-0 {
+  margin-top: 0;
+}
   .main-panel {
     margin-right: 190px;
   }
 
   #scroller {
-    height: 100vh;
+    height: 100%;
     overflow-y: scroll;
   }
 }
@@ -741,7 +755,6 @@ div#mainContainer.flex.style-scope.paper-header-panel {
   height: 68px;
   margin-left: auto;
   margin-right: -281px;
-  overflow-y: auto;
   min-height: 68px;
   background-color: #881204 !important;
   margin-bottom: auto;
@@ -754,5 +767,5 @@ div#mainContainer.flex.style-scope.paper-header-panel {
 }
 
 .page-host {
-  top: 0;
+  top: -6px;
 }

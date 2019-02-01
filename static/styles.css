@@ -113,7 +113,7 @@ polymer-slideshow {
   top: 0;
   bottom: 0;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: inherit;
 }
 
 @media print {
@@ -391,6 +391,41 @@ section.au-enter-active {
   z-index: 999;
 }
 
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+}
+
+::-webkit-scrollbar:vertical {
+  width: 10px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.content-block {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  margin-top: 74px;
+  margin-right: inherit;
+}
+
 @media screen and (min-width: 900px) {
   .content-block {
     position: absolute;
@@ -399,10 +434,23 @@ section.au-enter-active {
     left: 0;
     right: 0;
     overflow: auto;
+    overflow-y: scroll
+  }
+.material-content x-scope paper-material-0 {
+  margin-top: 0;
+}
+  .main-panel {
+    margin-right: 190px;
   }
 
-  .main-panel {
-    margin-right: 200px;
+  .page-content {
+    border-right: 1px solid black;
+    background-color: white;
+  }
+
+  #scroller {
+    height: 100%;
+    overflow-y: scroll;
   }
 }
 
@@ -434,14 +482,36 @@ section.au-enter-active {
     display: none;
   }
 
+  .page-content {
+    border-right: 0;
+    background-color: white;
+  }
+
   .content-block {
     overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar:vertical {
+    width: 0 !important;
+  }
+
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 0 !important;
   }
 }
 
 @media screen and (max-width: 400px) {
   ::-webkit-scrollbar:vertical {
-    width: 0;
+    width: 0 !important;
+  }
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 0 !important;
+  }
+  .page-content {
+    border-right: 0;
+    background-color: white;
   }
 }
 
@@ -699,18 +769,12 @@ div#mainContainer.flex.style-scope.paper-header-panel {
   height: 68px;
   margin-left: auto;
   margin-right: -281px;
-  overflow-y: auto;
   min-height: 68px;
   background-color: #881204 !important;
   margin-bottom: auto;
   padding-left: 1px;
 }
 
-.page-content {
-  border-right: 1px solid black;
-  background-color: white;
-}
-
 .page-host {
-  top: 0;
+  top: -6px;
 }

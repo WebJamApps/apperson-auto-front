@@ -2,72 +2,74 @@
   <require from="./components/pic-slider"></require>
 
   <div class="page-content">
-    <div style="float: right; width: 674px; margin:auto;" if.bind = "widescreen">
-      <div class="p-0 m-0">
-        <picture-slider data.bind="slides"></picture-slider>
-      </div>
-    </div>
-    <div if.bind = "!widescreen">
-      <div class="p-0 m-0">
-        <picture-slider data.bind="slides"></picture-slider>
-      </div>
-    </div>
-  </div>
-  <div>
-    <div class="material-content x-scope paper-material-0">
-
-      <h4 if.bind = "!widescreen" style="margin-top:25px; font-weight: bold;font-size: 16pt;"> Your one stop auto shop where honesty, quality work, and fair pricing are guaranteed</h4>
-      <h4 if.bind = "widescreen" style="margin-top:30px;margin-bottom:30px;margin-right:15px;width:540px;font-weight: bold;font-size: 16pt;">Your one stop auto shop where honesty, quality work, and fair pricing are guaranteed.</h4>
-
-      <div>
-        <p>Are you looking for well qualified mechanics? Look no further!</p>
-        <p>We have more than <strong>150 years of combined experience</strong>!</p>
-        <p>Take advantage of our<br><strong>FREE high mileage / vacation vehicle check ove</strong><strong>r</strong>.</p>
-        <p><br>Receive <strong>5% OFF mechanical repairs</strong>
-          <br>when you present the coupon from this site.
-        </p>
-
-        <p>Shuttle service is available to you.</p>
-      </div>
-
-      <div style="width: 300px;float:right; clear: both; margin-top:100px" if.bind="widescreen">
-        <div class="slideshowimage">
-          <img alt="graphic coupon" src="../static/imgs/banner5.png"/>
+    <div>
+      <div style="float: right; width: 674px; margin:auto;" if.bind = "widescreen">
+        <div class="p-0 m-0">
+          <picture-slider data.bind="slides"></picture-slider>
         </div>
       </div>
-
-      <h4 style="margin-top:40px">Apperson Automotive - Salem, VA Auto Repair Service</h4>
-
-      <p><strong>Quality service for your vehicle (not limited to):</strong></p>
-
-      <ul>
-        <li>State inspections</li>
-        <li>Alignments</li>
-        <li>Tune ups</li>
-        <li>Oil changes</li>
-        <li>Coolant flush</li>
-      </ul>
-
-      <div>
-        <p><strong>Get to Know Apperson Automotive:</strong></p>
-        <ul>
-          <li><a href="/auto-maintenance" title="Apperson Automotive Auto Maintenance">Auto Maintenance</a> – Let us handle your oil change, coolant flushes, alignments, and more</li>
-          <li><a href="/general-auto-repair" title="Apperson Automotive General Auto Repair">General Auto Repair</a> – General repairs for includes (not limited to) brake calipers, window motors, regulators, and starters</li>
-          <li><a href="/major-auto-repair" title="Apperson Automotive Major Auto Repair">Major Auto Repair</a> – We’ll handle your steering rack issues, intake gasket repairs, heat and air system problems, and much more</li>
-        </ul>
-        <p>We’ll repair any make or model vehicle you have.</p>
-
-        <p>
-          To schedule your FREE high mileage or vacation vehicle check over call Apperson Automotive at
-          <a href="tel:5404447337">540-444-7337</a><br>
-          You can also stop by at 1601 Apperson Drive, Salem VA 24153.
-        </p>
-
+      <div if.bind = "!widescreen">
+        <div class="p-0 m-0">
+          <picture-slider data.bind="slides"></picture-slider>
+        </div>
       </div>
+    </div>
+    <div>
+      <div class="material-content x-scope paper-material-0">
 
-      <div if.bind="!widescreen">
-        <div style="width: 295px;  margin:auto;">
-          <img alt="graphic coupon" src="../static/imgs/banner5.png"/>
+        <h4 if.bind = "!widescreen" style="margin-top:25px; font-weight: bold;font-size: 16pt;"> Your one stop auto shop where honesty, quality work, and fair pricing are guaranteed</h4>
+        <h4 if.bind = "widescreen" style="margin-top:30px;margin-bottom:30px;margin-right:15px;width:540px;font-weight: bold;font-size: 16pt;">Your one stop auto shop where honesty, quality work, and fair pricing are guaranteed.</h4>
+
+        <div>
+          <p>Are you looking for well qualified mechanics? Look no further!</p>
+          <p>We have more than <strong>150 years of combined experience</strong>!</p>
+          <p>Take advantage of our<br><strong>FREE high mileage / vacation vehicle check ove</strong><strong>r</strong>.</p>
+          <p><br>Receive <strong>5% OFF mechanical repairs</strong>
+            <br>when you present the coupon from this site.
+          </p>
+
+          <p>Shuttle service is available to you.</p>
+        </div>
+
+        <div style="width: 300px;float:right; clear: both; margin-top:100px" if.bind="widescreen">
+          <div class="slideshowimage">
+            <img alt="graphic coupon" src="../static/imgs/banner5.png"/>
+          </div>
+        </div>
+
+        <h4 style="margin-top:40px">Apperson Automotive - Salem, VA Auto Repair Service</h4>
+
+        <p><strong>Quality service for your vehicle (not limited to):</strong></p>
+
+        <ul>
+          <li>State inspections</li>
+          <li>Alignments</li>
+          <li>Tune ups</li>
+          <li>Oil changes</li>
+          <li>Coolant flush</li>
+        </ul>
+
+        <div>
+          <p><strong>Get to Know Apperson Automotive:</strong></p>
+          <ul>
+            <li><a href="/auto-maintenance" title="Apperson Automotive Auto Maintenance">Auto Maintenance</a> – Let us handle your oil change, coolant flushes, alignments, and more</li>
+            <li><a href="/general-auto-repair" title="Apperson Automotive General Auto Repair">General Auto Repair</a> – General repairs for includes (not limited to) brake calipers, window motors, regulators, and starters</li>
+            <li><a href="/major-auto-repair" title="Apperson Automotive Major Auto Repair">Major Auto Repair</a> – We’ll handle your steering rack issues, intake gasket repairs, heat and air system problems,<br if.bind="widescreen"> and much more</li>
+          </ul>
+          <p>We’ll repair any make or model vehicle you have.</p>
+
+          <p>
+            To schedule your FREE high mileage or vacation vehicle check over call Apperson Automotive at<br>
+            <a href="tel:5404447337">540-444-7337</a>
+            You can also stop by at 1601 Apperson Drive, Salem VA 24153.
+          </p>
+
+        </div>
+
+        <div if.bind="!widescreen">
+          <div style="width: 295px;  margin:auto;">
+            <img alt="graphic coupon" src="../static/imgs/banner5.png"/>
+          </div>
         </div>
       </div>
     </div>

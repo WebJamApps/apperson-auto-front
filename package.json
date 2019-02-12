@@ -87,7 +87,7 @@
     "postcss": "^6.0.14",
     "postcss-loader": "latest",
     "postcss-sass": "^0.2.0",
-    "pushstate-server": "latest",
+    "pushstate-server": "3.1.0",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
     "react-player": "^1.6.4",

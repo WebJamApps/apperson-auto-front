@@ -9,7 +9,7 @@
   },
   "author": "HandlersAndKickers",
   "engines": {
-    "node": ">=11.6.0"
+    "node": ">=11.8.0"
   },
   "files": [
     "webpack.config.js",
@@ -87,7 +87,6 @@
     "postcss": "^6.0.14",
     "postcss-loader": "latest",
     "postcss-sass": "^0.2.0",
-    "pushstate-server": "latest",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
     "react-player": "^1.6.4",

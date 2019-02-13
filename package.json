@@ -9,7 +9,7 @@
   },
   "author": "HandlersAndKickers",
   "engines": {
-    "node": ">=11.6.0"
+    "node": ">=11.8.0"
   },
   "files": [
     "webpack.config.js",
@@ -87,7 +87,6 @@
     "postcss": "^6.0.14",
     "postcss-loader": "latest",
     "postcss-sass": "^0.2.0",
-    "pushstate-server": "latest",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
     "react-player": "^1.6.4",
@@ -95,7 +94,7 @@
     "react-slick": "^0.23.2",
     "redux": "^3.7.2",
     "slick-carousel": "^1.8.1",
-    "snyk": "^1.111.1",
+    "snyk": "^1.124.1",
     "style-loader": "latest",
     "through2": "^2.0.3",
     "uglify-js": "latest",

@@ -285,6 +285,10 @@ section.au-enter-active {
   color: #23527c;
 }
 
+.footer-link:hover {
+  text-decoration: none;
+}
+
 .material-content {
   padding: 10px;
 }

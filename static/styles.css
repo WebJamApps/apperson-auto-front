@@ -284,9 +284,11 @@ section.au-enter-active {
   background-color: #eee;
   color: #23527c;
 }
+
 .footer-link:hover {
   text-decoration: none;
 }
+
 .material-content {
   padding: 10px;
 }

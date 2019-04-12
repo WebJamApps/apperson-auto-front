@@ -1,6 +1,6 @@
 {
   "name": "apperson-auto-front",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Front End of appersonautomotive.org",
   "main": "dist/index.html",
   "repository": {
@@ -9,7 +9,7 @@
   },
   "author": "HandlersAndKickers",
   "engines": {
-    "node": ">=11.12.0"
+    "node": ">=11.13.0"
   },
   "files": [
     "webpack.config.js",
@@ -65,7 +65,7 @@
     "css-loader": "latest",
     "csvjson": "latest",
     "dotenv": "latest",
-    "expose-loader": "^0.7.5",
+    "expose-loader": "latest",
     "express": "latest",
     "express-sslify": "latest",
     "extract-text-webpack-plugin": "next",
@@ -73,20 +73,20 @@
     "file-saver": "latest",
     "font-awesome": "^4.7.0",
     "global": "^4.3.2",
-    "hammerjs": "^2.0.8",
+    "hammerjs": "latest",
     "html-loader": "latest",
     "html-webpack-plugin": "latest",
     "jasmine-spec-reporter": "latest",
     "jquery": "latest",
     "material-ui-time-picker": "latest",
-    "mini-css-extract-plugin": "^0.4.0",
+    "mini-css-extract-plugin": "latest",
     "minimatch": "^3.0.4",
     "nps": "latest",
     "nps-utils": "latest",
     "popper.js": "latest",
-    "postcss": "^6.0.14",
+    "postcss": "latest",
     "postcss-loader": "latest",
-    "postcss-sass": "^0.2.0",
+    "postcss-sass": "latest",
     "react": "latest",
     "react-dom": "latest",
     "react-player": "latest",

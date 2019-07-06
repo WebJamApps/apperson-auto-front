@@ -9,7 +9,7 @@
   },
   "author": "HandlersAndKickers",
   "engines": {
-    "node": ">=11.13.0"
+    "node": ">=12.5.0"
   },
   "files": [
     "webpack.config.js",
@@ -170,8 +170,7 @@
     "protractor": "nps e2e",
     "test:stylelint": "stylelint \"src/**/*.html\" && stylelint \"static/**/*.css\"",
     "test:html": "htmlhint src/**/*.html",
-    "server:prod": "node server.js",
-    "prepublish": "npm run snyk-protect"
+    "server:prod": "node server.js"
   },
   "snyk": true
 }

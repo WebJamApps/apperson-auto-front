@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.7.1
+version: v1.13.5
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
@@ -18,3 +18,50 @@ patch:
         patched: '2017-05-24T11:12:20.609Z'
     - pushstate-server > serve-static > send > ms:
         patched: '2017-05-24T11:12:20.609Z'
+  SNYK-JS-LODASH-450202:
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2019-07-03T23:38:25.396Z'
+    - nps > lodash:
+        patched: '2019-07-03T23:38:25.396Z'
+    - '@babel/register > lodash':
+        patched: '2019-07-03T23:38:25.396Z'
+    - html-webpack-plugin > lodash:
+        patched: '2019-07-03T23:38:25.396Z'
+    - snyk > lodash:
+        patched: '2019-07-03T23:38:25.396Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        patched: '2019-07-03T23:38:25.396Z'
+    - snyk > inquirer > lodash:
+        patched: '2019-07-03T23:38:25.396Z'
+    - nps-utils > concurrently > lodash:
+        patched: '2019-07-03T23:38:25.396Z'
+    - snyk > snyk-config > lodash:
+        patched: '2019-07-03T23:38:25.396Z'
+    - snyk > snyk-nodejs-lockfile-parser > lodash:
+        patched: '2019-07-03T23:38:25.396Z'
+    - extract-text-webpack-plugin > async > lodash:
+        patched: '2019-07-03T23:38:25.396Z'
+    - webpack-bundle-analyzer > lodash:
+        patched: '2019-07-03T23:38:25.396Z'
+    - '@babel/core > @babel/types > lodash':
+        patched: '2019-07-03T23:38:25.396Z'
+    - snyk > snyk-php-plugin > lodash:
+        patched: '2019-07-03T23:38:25.396Z'
+    - '@babel/core > @babel/helpers > @babel/types > lodash':
+        patched: '2019-07-03T23:38:25.396Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2019-07-03T23:38:25.396Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2019-07-03T23:38:25.396Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-07-03T23:38:25.396Z'
+    - '@babel/core > @babel/helpers > @babel/template > @babel/types > lodash':
+        patched: '2019-07-03T23:38:25.396Z'
+    - '@babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/helper-annotate-as-pure > @babel/types > lodash':
+        patched: '2019-07-03T23:38:25.396Z'
+    - '@babel/plugin-proposal-function-sent > @babel/helper-wrap-function > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash':
+        patched: '2019-07-03T23:38:25.396Z'
+    - '@babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2019-07-03T23:38:25.396Z'
+    - '@babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash':
+        patched: '2019-07-03T23:38:25.396Z'

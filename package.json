@@ -9,7 +9,7 @@
   },
   "author": "HandlersAndKickers",
   "engines": {
-    "node": ">=11.13.0"
+    "node": ">=12.5.0"
   },
   "files": [
     "webpack.config.js",
@@ -94,7 +94,7 @@
     "react-slick": "latest",
     "redux": "latest",
     "slick-carousel": "latest",
-    "snyk": "latest",
+    "snyk": "^1.189.0",
     "style-loader": "latest",
     "through2": "^2.0.3",
     "uglify-js": "latest",

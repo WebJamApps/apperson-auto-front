@@ -151,7 +151,7 @@
   },
   "scripts": {
     "start": "nps",
-    "test": "yarn run test:html && yarn run test:stylelint && rm -rf coverage && npm run test:jest && npm run test:jest-react && npm run combine-coverage && npm run protractor",
+    "test": "rm -rf coverage && yarn test:jest && yarn test:jest-react && yarn combine-coverage && yarn protractor",
     "combine-coverage": "istanbul-combine -d coverage -p none -r lcov -r html coverage/jest-react/coverage-final.json coverage/jest/coverage-final.json coverage/coverage-karma/coverage-final.json",
     "test:jest": "cross-env NODE_ENV=test && jest --no-cache --config jest.config.json --notify",
     "protest": "nps test",

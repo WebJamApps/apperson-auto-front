@@ -101,7 +101,8 @@
     "wait-on": "latest",
     "webpack": "latest",
     "webpack-bundle-analyzer": "latest",
-    "webpack-cli": "latest"
+    "webpack-cli": "latest",
+    "snyk": "^1.258.2"
   },
   "peerDependencies": {},
   "devDependencies": {
@@ -169,7 +170,8 @@
     "protractor": "nps e2e",
     "test:stylelint": "stylelint \"src/**/*.html\" && stylelint \"static/**/*.css\"",
     "test:html": "htmlhint src/**/*.html",
-    "server:prod": "node server.js"
+    "server:prod": "node server.js",
+    "prepare": "yarn run snyk-protect"
   },
   "snyk": true
 }
